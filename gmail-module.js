@@ -49,6 +49,7 @@ Module.register("gmail-module", {
 
     getDom: function() {
         let wrapper = document.createElement("div");
+        if (this.config.data.length === 0) return wrapper;
         let titleText = document.createElement("h5");
         titleText.innerHTML = "Mail";
         titleText.style.height = "25px";
