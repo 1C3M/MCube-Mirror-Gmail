@@ -16,7 +16,7 @@ Module.register("gmail-module", {
     data : [{from:"Loading",snippet:"..."}],
     defaults: {
         text: "Gmail-Module",
-        rest_url: "http://192.168.0.16:8080",
+        rest_url: "http://192.168.0.5:8080",
         token: "asdf",
         count: 5,
     },
@@ -28,8 +28,8 @@ Module.register("gmail-module", {
             this.getGmailData(this);
             setTimeout(()=>{this.updateDom(1000);}, 5000);
         }, 1000);
-        setInterval(()=>{this.getGmailData(this);}, 60000);
-        setInterval(()=>{this.updateDom(1000);}, 60000);
+        setInterval(()=>{this.getGmailData(this);}, 30000);
+        setInterval(()=>{this.updateDom(1000);}, 30000);
     },
 
     getGmailData: function(self) {
